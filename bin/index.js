@@ -18,7 +18,7 @@ var fs      = require('fs'),
     mime    = require('mime');
 
 /**
- * Command line
+ * Process arguments
  */
 command
     .version('0.1.0')
