@@ -1,0 +1,24 @@
+{
+  "author": "",
+  "name": "simple",
+  "description": "A naive Node.js clone of Python's simpleHttpServer",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/thisandagain/simple.git"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "vows test/*"
+  },
+  "dependencies": {
+    "commander": "~1.0.0",
+    "mime": "~1.2.6"
+  },
+  "devDependencies": {
+    "vows": "0.6.3"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
