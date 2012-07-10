@@ -14,7 +14,17 @@ var fs      = require('fs'),
     http    = require('http'),
     path    = require('path'),
     url     = require('url'),
+    command = require('commander'),
     mime    = require('mime');
+
+/**
+ * Command line
+ */
+command
+    .version('0.1.0')
+    .option('-p, --port [port]', 'Server port [8000]', 8000)
+    .option('-d, --default [filename]', 'Default index [index.html]', 'index.html')
+    .parse(process.argv);
 
 /**
  * HTTP server
@@ -25,7 +35,7 @@ http.createServer(function (req, res) {
 
     // Default index
     if (uri === '/') {
-        uri = 'index.html';
+        uri = command.default;
     }
     
     // Path relative to process
@@ -47,4 +57,9 @@ http.createServer(function (req, res) {
         fs.createReadStream(filename).pipe(res);
 
     });
-}).listen(3001);
+}).listen(command.port);
+
+/**
+ * Listening
+ */
+console.log('Serving HTTP on 0.0.0.0 port ' + command.port + ' ...');
