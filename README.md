@@ -1,18 +1,24 @@
 # Simple
-### Serve all the things!
+### HTTP all the things!
 
-Simple is a binary created using Node.js that clones some of the functionality of Python's `simpleHttpServer`. It's a rather naive and simple static HTTP server, but it gets the job done in a pinch.
+Simple is a binary created using Node.js that clones some of the functionality of Python's `simpleHttpServer`. It's a rather naive and simple static HTTP server, but it gets the job done in a pinch. Please don't use this in production... it's a development tool. Really.
 
 #### Installation
-    npm install -g simple
+```bash
+npm install -g simple
+```
 
 #### Basic Use
-    cd /my/awesome/website
-    simple
+```bash
+cd /my/awesome/website
+simple
+```
+```bash
+Serving HTTP on 0.0.0.0 port 8000 ...
+```
 
-#### Less Basic Use
-    cd /my/awesome/website
-    simple --port 3001 --default index.htm
-
-#### Help?
-	simple -h
+#### Options
+`-p` Port to listen on (defaults to 8000)
+`-d` Default index (defaults to `index.html`)
+`-s` Silent mode
+`-h` Help
