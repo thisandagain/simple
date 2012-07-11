@@ -24,7 +24,20 @@ command
     .version('0.1.0')
     .option('-p, --port [port]', 'Server port [8000]', 8000)
     .option('-d, --default [filename]', 'Default index [index.html]', 'index.html')
+    .option('-s, --silent', 'Silent mode')
     .parse(process.argv);
+
+/**
+ * Logger
+ */
+var log = function (req, uri, code) {
+    if (!command.silent) {
+        var client  = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+        var stamp   = '[' + new Date().toUTCString() + ']';
+        var request = '"' + req.method + ' ' + uri + ' HTTP/1.1" ' + code;
+        console.log(client + ' - - ' + stamp + ' ' + request + ' -');
+    }
+};
 
 /**
  * HTTP server
@@ -49,13 +62,14 @@ http.createServer(function (req, res) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('404 Not Found\n');
             res.end();
+            log(req, uri, 404);
             return;
         }
 
         // 200
         res.writeHead(200, {'Content-Type': mime.lookup(filename)});
         fs.createReadStream(filename).pipe(res);
-
+        log(req, uri, 200);
     });
 }).listen(command.port);
 
