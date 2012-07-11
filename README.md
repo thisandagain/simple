@@ -19,6 +19,9 @@ Serving HTTP on 0.0.0.0 port 8000 ...
 
 #### Options
 `-p` Port to listen on (defaults to 8000)
+
 `-d` Default index (defaults to `index.html`)
+
 `-s` Silent mode
+
 `-h` Help
