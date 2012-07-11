@@ -6,9 +6,11 @@
   "repository": {
     "url": "https://github.com/thisandagain/simple.git"
   },
-  "main": "./lib/index",
-  "scripts": {
-    "test": "vows test/*"
+  "main": "./bin/index",
+  "scripts": {},
+  "preferGlobal": "true",
+  "bin": {
+    "simple": "./bin/index"
   },
   "dependencies": {
     "commander": "~1.0.0",
@@ -20,9 +22,5 @@
   "optionalDependencies": {},
   "engines": {
     "node": "*"
-  },
-  "preferGlobal": "true",
-  "bin": {
-    "simple": "./bin/index"
   }
 }
