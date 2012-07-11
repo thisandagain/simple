@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Simple : A simple static HTTP server" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Simple</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/thisandagain/simple">View on GitHub</a>
+
+          <h1 id="project_title">Simple</h1>
+          <h2 id="project_tagline">A simple static HTTP server</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/thisandagain/simple/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/thisandagain/simple/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>HTTP all the things!</h3>
+
+<p>Simple is a binary created using Node.js that clones some of the functionality of Python's <code>simpleHttpServer</code>. It's a rather naive and simple static HTTP server, but it gets the job done in a pinch. Please don't use this in production... it's a development tool. Really.</p>
+
+<h4>Installation</h4>
+
+<div class="highlight">
+<pre>npm install -g simple
+</pre>
+</div>
+
+
+<h4>Basic Use</h4>
+
+<div class="highlight">
+<pre><span class="nb">cd</span> /my/awesome/website
+simple
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre>Serving HTTP on 0.0.0.0 port 8000 ...
+</pre>
+</div>
+
+
+<h4>Options</h4>
+
+<p><code>-p</code> Port to listen on (defaults to 8000)</p>
+
+<p><code>-d</code> Default index (defaults to <code>index.html</code>)</p>
+
+<p><code>-s</code> Silent mode</p>
+
+<p><code>-h</code> Help</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Simple maintained by <a href="https://github.com/thisandagain">thisandagain</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33281153-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
