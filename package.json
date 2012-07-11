@@ -6,11 +6,11 @@
   "repository": {
     "url": "https://github.com/thisandagain/simple.git"
   },
-  "main": "./bin/index",
+  "main": "./bin/index.js",
   "scripts": {},
   "preferGlobal": "true",
   "bin": {
-    "simple": "./bin/index"
+    "simple": "./bin/index.js"
   },
   "dependencies": {
     "commander": "~1.0.0",
