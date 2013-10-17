@@ -23,6 +23,7 @@ var fs      = require('fs'),
 command
     .version('0.1.0')
     .option('-p, --port [port]', 'Server port [8000]', 8000)
+    .option('-h, --host [host]', 'Hostname [127.0.0.1]', '127.0.0.1')
     .option('-d, --default [filename]', 'Default index [index.html]', 'index.html')
     .option('-s, --silent', 'Silent mode')
     .parse(process.argv);
@@ -71,9 +72,9 @@ http.createServer(function (req, res) {
         fs.createReadStream(filename).pipe(res);
         log(req, uri, 200);
     });
-}).listen(command.port);
+}).listen(command.port, command.host);
 
 /**
  * Listening
  */
-console.log('Serving HTTP on 0.0.0.0 port ' + command.port + ' ...');
+console.log('Serving HTTP on ' + command.host + ' port ' + command.port + ' ...');
