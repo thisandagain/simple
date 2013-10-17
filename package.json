@@ -2,7 +2,7 @@
   "author": "",
   "name": "simple",
   "description": "A naive Node.js clone of Python's simpleHttpServer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "url": "https://github.com/thisandagain/simple.git"
   },
