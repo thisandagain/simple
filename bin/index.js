@@ -51,13 +51,13 @@ http.createServer(function (req, res) {
     if (uri === '/') {
         uri = command.default;
     }
-    
+
     // Path relative to process
     var filename    = path.join(process.cwd(), uri);
 
     // Check for file existence
-    path.exists(filename, function(exists) {
-        
+    fs.exists(filename, function(exists) {
+
         // 404
         if (!exists) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
