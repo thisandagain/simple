@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "commander": "~1.0.0",
-    "mime": "~1.2.6"
+    "mime": "~2.4.4"
   },
   "devDependencies": {
     "vows": "0.6.3"
